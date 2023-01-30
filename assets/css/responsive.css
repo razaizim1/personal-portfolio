@@ -1,0 +1,47 @@
+@media all and (max-width: 1200px) {
+    #header {
+        left: -300px;
+    }
+
+    #main {
+        margin-left: 0;
+    }
+
+    #footer {
+        position: static;
+        width: auto;
+        padding-right: 20px 15px;
+    }
+
+    #footer {
+        position: static;
+        width: auto;
+        padding-right: 20px 15px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .heading {
+        background-attachment: fixed;
+    }
+}
+
+@media all and (max-width: 768px) {
+    #hero h1 {
+        font-size: 48px;
+        line-height: 36px;
+    }
+
+    .portfolio-details .portfolio-description h2 {
+        width: 100%;
+    }
+
+    .portfolio-details .portfolio-info {
+        position: static;
+        margin-top: 30px;
+    }
+
+    .testimonials {
+        margin: 30px 10px;
+    }
+}
