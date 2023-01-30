@@ -8,48 +8,6 @@
     });
   });
 
-  // COUNTER UP
-  $(".counter").counterUp({
-    delay: 10,
-    time: 500,
-  });
-
-  // AOS ANIMATION
-  AOS.init();
-
-  // ISOTOP
-  var $grid = $(".portfolio-container").isotope({
-    itemSelector: ".portfolio-item",
-    layoutMode: "fitRows",
-  });
-
-  //FILTER ITEMS BUTTON
-  $(".filter-btn li").on("click", function () {
-    $("#portfolio-flters li").removeClass("active-btn");
-    $(this).addClass("active-btn");
-
-    var filterValue = $(this).attr("data-filter");
-    $grid.isotope({ filter: filterValue });
-  });
-
-  // OWL CAROUSEL
-  $(".testimonials-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      768: {
-        items: 2,
-      },
-      900: {
-        items: 3,
-      },
-    },
-  });
-
   // SMOOTH SCROLL , SCROLL TO
   $(document).on("click", ".nav-menu a, .scrollto", function (e) {
     if (
@@ -168,6 +126,12 @@
     return false;
   });
 
+  // COUNTER UP
+  $(".counter").counterUp({
+    delay: 10,
+    time: 500,
+  });
+
   // WAYPOINT ON SKILLS
   $(".skills-content").waypoint(
     function () {
@@ -179,4 +143,49 @@
       offset: "80%",
     }
   );
+
+  // AOS ANIMATION
+  function aos_init() {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out-back",
+      once: true
+    });
+  }
+  $(window).on('load', function() {
+    aos_init();
+  });
+
+  // ISOTOP
+  var $grid = $(".portfolio-container").isotope({
+    itemSelector: ".portfolio-item",
+    layoutMode: "fitRows",
+  });
+
+  //FILTER ITEMS BUTTON
+  $(".filter-btn li").on("click", function () {
+    $("#portfolio-flters li").removeClass("active-btn");
+    $(this).addClass("active-btn");
+
+    var filterValue = $(this).attr("data-filter");
+    $grid.isotope({ filter: filterValue });
+  });
+
+  // OWL CAROUSEL
+  $(".testimonials-carousel").owlCarousel({
+    autoplay: true,
+    dots: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      768: {
+        items: 2,
+      },
+      900: {
+        items: 3,
+      },
+    },
+  });
 })(jQuery);
