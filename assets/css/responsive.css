@@ -3,6 +3,10 @@
         left: -300px;
     }
 
+    #hero{
+        height: auto;
+    }
+
     #main {
         margin-left: 0;
     }
@@ -32,6 +36,11 @@
         line-height: 36px;
     }
 
+    #hero .headline{
+        font-size: 35px;
+        padding-right: 10px;
+    }
+
     .portfolio-details .portfolio-description h2 {
         width: 100%;
     }
@@ -43,5 +52,12 @@
 
     .testimonials {
         margin: 30px 10px;
+    }
+}
+
+@media all and (max-width: 575px){
+
+    #hero .headline{
+        font-size: 25px;
     }
 }
